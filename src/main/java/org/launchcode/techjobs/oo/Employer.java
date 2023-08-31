@@ -2,7 +2,7 @@ package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 
-public class Employer {
+public class Employer extends JobField{
 
     private int id;
     private static int nextId = 1;
@@ -45,6 +45,9 @@ public class Employer {
     }
 
     public String getValue() {
+        if ( value == null || value.isEmpty()){
+            return "Data not available";
+        }
         return value;
     }
 
